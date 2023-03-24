@@ -1,18 +1,16 @@
 <?php
-    $username = "Fred Smith";
-    echo $username;
-    echo "<br>";
-    $current_user = $username;
-    echo $current_user;
-    echo "<br>";
+    $a1 = "William";
+    $a2 = "Henry";
+    $a3 = "Gates";
+    
+    echo $a1 . " " . $a2 . " " . $a3 . "<br>";
+    fix_names($a1, $a2, $a3);
+    echo $a1 . " " . $a2 . " " . $a3;
 
-    $author = "Brian W. Kernighan";
-
-    echo <<<_END
-        Debugging is twice as hard as writing the code in the first place. 
-        Therefore, if you write the code as cleverly as possible, you are,
-        by definition, not smart enough to debug it.
-
-        - $author;
-    _END; 
+    function fix_names(&$n1, &$n2, &$n3)
+    {
+        $n1 = ucfirst(strtolower($n1));
+        $n2 = ucfirst(strtolower($n2));
+        $n3 = ucfirst(strtolower($n3));
+    }
 ?>
